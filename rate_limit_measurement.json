@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-03",
+  "endpoint": "GET /search-api/v2/search/rendered-paginated?size=1",
+  "egress": "BY HTTP proxy (URL omitted)",
+  "sequential": {
+    "requests": 10,
+    "statuses": {"200": 10},
+    "latency_seconds": {"min": 0.159, "median": 0.173, "max": 0.189},
+    "retry_after_values": [],
+    "rate_headers": {}
+  },
+  "burst": {
+    "requests": 20,
+    "concurrency": 20,
+    "statuses": {"200": 20},
+    "latency_seconds": {"min": 0.159, "median": 0.204, "max": 0.226},
+    "retry_after_values": [],
+    "rate_headers": {}
+  },
+  "observed_throttle": false,
+  "chosen_default_min_interval_seconds": 0.5,
+  "note": "Short empirical sample, not a sustained-limit guarantee. The client stops immediately on HTTP 429 and does not retry it."
+}
